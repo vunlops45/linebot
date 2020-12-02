@@ -21,11 +21,15 @@ if ( sizeof($request_array['events']) > 0 ) {
         $reply_token = $event['replyToken'];
 
 
-        $data = [
-            'replyToken' => $reply_token,
-            'messages' => [['type' => 'text', 'text' => json_encode($request_array)]]
-        ];
-        $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+        //$data = [
+        //    'replyToken' => $reply_token,
+        //    'messages' => [['type' => 'text', 'text' => json_encode($request_array)]]
+        //];
+        $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+
+        $post_body = json_encode($arr);
+    // $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+     
         //$post_body = 'สวัสดี';
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
 

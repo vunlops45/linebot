@@ -32,7 +32,7 @@ if($arrJson['events'][0]['message']['text'] == "หวย"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = $arrJson2['name'][0]['Update']['text'];
+  $arrPostData['messages'][0]['text'] = $content;
 }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

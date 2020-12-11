@@ -16,11 +16,11 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
-if($arrJson['events'][0]['message']['text'] == "Hello"){
+if($arrJson['events'][0]['message']['text'] == "หวย"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 แสดงการอัพเดท fullist (gatewaymonitor)" . "\r\n" . "กด 2 แสดงสถานะการเติมเงินจากภายนอก POS Bank". "\r\n" . "กด 3 แสดง OUTBOX และ INBOX ด่านบางจาก";
+  $arrPostData['messages'][0]['text'] = "ตรวจสอบหวยล่าสุด" . "\r\n" . "ผลสลากรางวัลหลัก https://www.lottery.co.th/show" . "\r\n" . "กรอกหมายเลขสลาก https://www.lottery.co.th/numbers";
 
   //$arrPostData = array();
   //$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

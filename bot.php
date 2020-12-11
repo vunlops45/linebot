@@ -28,11 +28,11 @@ if($arrJson['events'][0]['message']['text'] == "หวย"){
   //$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 }else if($arrJson['events'][0]['message']['text'] == "hello"){
  $a = file_get_contents('http://www.thaigold.info/RealTimeDataV2/gtdata_.txt');
-$json = json_encode($a);
+ $arrJson2 = json_decode($content, true);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = $json;
+  $arrPostData['messages'][0]['text'] = $arrjson2;
 }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

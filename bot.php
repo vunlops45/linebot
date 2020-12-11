@@ -9,6 +9,8 @@ $strAccessToken = $ACCESS_TOKEN;
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
+ $content2 = file_get_contents('http://www.thaigold.info/RealTimeDataV2/gtdata_.txt');
+ $arrJson2 = json_decode($content2, true);
 
 $strUrl = "https://api.line.me/v2/bot/message/reply";
 
@@ -27,12 +29,10 @@ if($arrJson['events'][0]['message']['text'] == "หวย"){
   //$arrPostData['messages'][0]['type'] = "text";
   //$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 }else if($arrJson['events'][0]['message']['text'] == "hello"){
- $content2 = file_get_contents('http://www.thaigold.info/RealTimeDataV2/gtdata_.txt');
- $arrJson2 = json_decode($content2, true);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = $arrJson2['GoldSpot'][0]['message']['text'];
+  $arrPostData['messages'][0]['text'] = $content;
 }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

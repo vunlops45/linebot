@@ -27,10 +27,12 @@ if($arrJson['events'][0]['message']['text'] == "หวย"){
   //$arrPostData['messages'][0]['type'] = "text";
   //$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 }else if($arrJson['events'][0]['message']['text'] == "hello"){
+ $a = file_get_contents('https://www.w3schools.com/');
+
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 แสดงการอัพเดท fullist (gatewaymonitor)" . "\r\n" . "กด 2 แสดงสถานะการเติมเงินจากภายนอก POS Bank". "\r\n" . "กด 3 แสดง OUTBOX และ INBOX ด่านบางจาก";
+  $arrPostData['messages'][0]['text'] = $a;
 }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

@@ -43,12 +43,12 @@ if($arrJson['events'][0]['message']['text'] == "1"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-}else if($arrJson['events'][0]['message']['text'] == "1"){
+}else if($arrJson['events'][0]['message']['text'] == "3"){
   //include('bt_monitor\bt_monitor.php');
-  }else if($arrJson['events'][0]['message']['text'] == "2"){
+  }else if($arrJson['events'][0]['message']['text'] == "4"){
   //include('POS_monitor_BANK_line.php');
 
-}else if($arrJson['events'][0]['message']['text'] == "3"){
+}else if($arrJson['events'][0]['message']['text'] == "5"){
   //include('monitor_bj_line.php');
 }else{
   }

@@ -33,7 +33,7 @@ if($arrJson['events'][0]['message']['text'] == "1"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "https://www.goldtraders.or.th/";
-}else if($arrJson['events'][0]['message']['text'] == "a"){
+}else if($arrJson['events'][0]['message']['text'] == "a") or ($arrJson['events'][0]['message']['text'] == "A"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";

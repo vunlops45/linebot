@@ -47,7 +47,7 @@ if($arrJson['events'][0]['message']['text'] == "1"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "https://hpjav.tv" . "\r\n" . "https://xhamster.one" . "\r\n" . "https://www.xnxx.com";
+  $arrPostData['messages'][0]['text'] = "https://hpjav.tv" . "\r\n" . "https://xhamster.one" . "\r\n" . "https://www.xnxx.com" . "\r\n" . "https://www.av-th.net";
 
   }else if($arrJson['events'][0]['message']['text'] == "4"){
   //include('POS_monitor_BANK_line.php');

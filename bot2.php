@@ -37,7 +37,7 @@ if($arrJson['events'][0]['message']['text'] == "1"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 ตรวจสอบหวยล่าสุด" . "\r\n" . "กด 2 ดูราคาทองล่าสุด". "\r\n" . "กด 3 Covid";
+  $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 ตรวจสอบหวยล่าสุด" . "\r\n" . "กด 2 ดูราคาทองล่าสุด". "\r\n" . "กด 3 Covid-19";
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

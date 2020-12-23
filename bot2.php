@@ -2,7 +2,7 @@
 
 define('LINE_API',"https://notify-api.line.me/api/notify");
 
-$ACCESS_TOKEN = 'O2rG9dgNlZSZKnQgE9Z2QE6rd7FXgUQogsymGh0FSwTnHPfgbp99ByQjYwiwVWp7L06+0FQEUepyzXn+q7U9OGZWiOx9A04OL4UfuywgTYjMR4XuMn1FX6cZg1HIxCSNkqTlhp4tYnaYZ8UWEmvTygdB04t89/1O/w1cDnyilFU='; 
+$ACCESS_TOKEN = 'ftsoY52+xbkCiMsxsIhyCqANP+8FIj5wpINM/PaLsH4Kel0eanJHOFbFfqdzkJ9OBBOf3XIPppGsENtJ+ZV9cJTGZyBt0ymPE3lSjHZoNQifx2wKIN98Rutz7dyl0Nknt4fWstSJulo7OOh2QYTy4gdB04t89/1O/w1cDnyilFU='; 
 
 
 $strAccessToken = $ACCESS_TOKEN;

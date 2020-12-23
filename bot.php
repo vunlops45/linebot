@@ -37,7 +37,7 @@ if($arrJson['events'][0]['message']['text'] == "1"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 ตรวจสอบหวยล่าสุด" . "\r\n" . "กด 2 ดูราคาทองล่าสุด". "\r\n" . "กด 3 ดูหนังโป๊";
+  $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 ตรวจสอบหวยล่าสุด" . "\r\n" . "กด 2 ดูราคาทองล่าสุด". "\r\n" . "กด 3 ดูหนังโป๊". "\r\n" . "กด 4 น้องบอสเมา";
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -50,8 +50,11 @@ if($arrJson['events'][0]['message']['text'] == "1"){
   $arrPostData['messages'][0]['text'] = "ขอให้มีความสุขในการรับชมนะครับ" . "\r\n" . "https://hpjav.tv" . "\r\n" . "https://xhamster.one" . "\r\n" . "https://www.xnxx.com" . "\r\n" . "https://www.av-th.net";
 
   }else if($arrJson['events'][0]['message']['text'] == "4"){
-  //include('POS_monitor_BANK_line.php');
-
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/97c2ff71d6e8ca6445c64c89136b6df4.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/97c2ff71d6e8ca6445c64c89136b6df4.jpg";
 }else if($arrJson['events'][0]['message']['text'] == "5"){
   //include('monitor_bj_line.php');
 }else{

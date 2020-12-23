@@ -46,8 +46,9 @@ if($arrJson['events'][0]['message']['text'] == "1"){
 }else if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ขอให้มีความสุขในการรับชมนะครับ" . "\r\n" . "https://hpjav.tv" . "\r\n" . "https://xhamster.one" . "\r\n" . "https://www.xnxx.com" . "\r\n" . "https://www.av-th.net";
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://static.posttoday.com/media/content/2020/02/12/FBB2680F4455161950EA941678A25F76.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://static.posttoday.com/media/content/2020/02/12/FBB2680F4455161950EA941678A25F76.jpg";
 
   }else if($arrJson['events'][0]['message']['text'] == "4"){
   //include('POS_monitor_BANK_line.php');

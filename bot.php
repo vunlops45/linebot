@@ -61,6 +61,12 @@ if($arrJson['events'][0]['message']['text'] == "1"){
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/d46d9656320100d0538615b11fffdeda.jpg";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/d46d9656320100d0538615b11fffdeda.jpg";
+ }else if($arrJson['events'][0]['message']['text'] == "6"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "video";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.i-vdo.info/v/jxex1tkk519";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.i-vdo.info/v/jxex1tkk519";
 }else{
   }
  

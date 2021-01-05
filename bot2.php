@@ -68,7 +68,7 @@ $obj = json_decode($json);
    "เสียชีวิต " . $obj->{'Deaths'} . " ราย". "\r\n" .
    "(ที่มา : กรมควบคุมโรค) ";
 
-}else if($arrJson['events'][0]['message']['text'] == "99"){
+}else if($arrJson['events'][0]['message']['text'] == "xczcxzzczxcz"){
    $json2 = file_get_contents('https://covid19.th-stat.com/api/open/cases/sum');
  
 

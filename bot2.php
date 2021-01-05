@@ -36,10 +36,10 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 ยอดผู้ป่วยโควิด-19" . "\r\n" . 
-   "กด 2 การเตรียมตัวก่อน-หลังเดินทางการในยุค โควิด-19". "\r\n" . 
+   "กด 2 พิ้นที่ที่มีการแพร่ระบาดของโควิด-19". "\r\n" . 
    "กด 3 การปฏิบัติตัวเมื่อเดินทางจากพื้นที่ที่มีการระบาด". "\r\n" .
    "กด 4 การรับมือโควิด-19". "\r\n" .
-   "กด 5 พิ้นที่ที่มีการแพร่ระบาดของโควิด-19";
+   "กด 5 การเตรียมตัวก่อน-หลังเดินทางการในยุค โควิด-19";
 }else if($arrJson['events'][0]['message']['text'] == "5"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

@@ -77,7 +77,8 @@ $obj = json_decode($json);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "ติดเชื้อสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "เพิ่มขึ้นวันนี้ " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
+  $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $obj->{'UpdateDate'} . "\r\n" .
+   "ติดเชื้อสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "เพิ่มขึ้นวันนี้ " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
    "รักษาหายแล้ว " . $obj->{'Recovered'} . " ราย" . "\r\n" . 
    "ตาย " . $obj->{'Deaths'} . " ราย";
 

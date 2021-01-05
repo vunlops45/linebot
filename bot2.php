@@ -77,8 +77,8 @@ $obj2 = json_decode($json2, true);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  //$arrPostData['messages'][0]['text'] = $content;
-  $arrPostData['messages'][0]['text'] = $obj2['Province']['Bangkok'];
+  //$arrPostData['messages'][0]['text'] = $obj2['Province']['Bangkok'];
+  $arrPostData['messages'][0]['text'] = $obj2['Nation']['Thailand'];
 
 }else{
   }

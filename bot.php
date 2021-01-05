@@ -69,13 +69,15 @@ if($arrJson['events'][0]['message']['text'] == "1"){
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.i-vdo.info/v/jxex1tkk519";
   }else if($arrJson['events'][0]['message']['text'] == "7"){
  
- $json = '{"CustomerID":"C001","Name":"Weerachai Nukitram","Email":"win.weerachai@thaicreate.com","CountryCode":"TH","Budget":"1000000","Used":"600000"}';
+ $json = file_get_contents('https://covid19.th-stat.com/api/open/today');
+ 
+ //$json = '{"CustomerID":"C001","Name":"Weerachai Nukitram","Email":"win.weerachai@thaicreate.com","CountryCode":"TH","Budget":"1000000","Used":"600000"}';
 
 $obj = json_decode($json);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = $obj->{'CustomerID'};
+  $arrPostData['messages'][0]['text'] = $obj->{'Confirmed'};
 
 }else{
   }

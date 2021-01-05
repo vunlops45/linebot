@@ -18,17 +18,14 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
-if($arrJson['events'][0]['message']['text'] == "1"){
+if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ตรวจสอบหวยล่าสุด" . "\r\n" . "ผลสลากรางวัลหลัก https://www.lottery.co.th/show" . "\r\n" . "กรอกหมายเลขสลาก https://www.lottery.co.th/numbers";
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
 
-  //$arrPostData = array();
-  //$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  //$arrPostData['messages'][0]['type'] = "text";
-  //$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "2"){
+}else if($arrJson['events'][0]['message']['text'] == "9"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
@@ -37,20 +34,22 @@ if($arrJson['events'][0]['message']['text'] == "1"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 ตรวจสอบหวยล่าสุด" . "\r\n" . "กด 2 ดูราคาทองล่าสุด". "\r\n" . "กด 3 Covid-19";
+  $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 ยอดผู้ป่วยโควิด-19" . "\r\n" . 
+   "กด 2 การเตรียมตัวก่อน-หลังเดินทางการในยุค COVID-19". "\r\n" . 
+   "กด 3 การปฏิบัติตัวเมื่อเดินทางจากพื้นที่ที่มีการระบาด";
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-}else if($arrJson['events'][0]['message']['text'] == "3"){
+}else if($arrJson['events'][0]['message']['text'] == "2"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://static.posttoday.com/media/content/2020/02/12/FBB2680F4455161950EA941678A25F76.jpg";
- $arrPostData['messages'][0]['previewImageUrl'] = "https://static.posttoday.com/media/content/2020/02/12/FBB2680F4455161950EA941678A25F76.jpg";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/24ff1031359f23f4b0e2fcb43daeaf9a.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/24ff1031359f23f4b0e2fcb43daeaf9a.jpg";
 
-  }else if($arrJson['events'][0]['message']['text'] == "4"){
+  }else if($arrJson['events'][0]['message']['text'] == "1"){
 
  $json = file_get_contents('https://covid19.th-stat.com/api/open/today');
  
@@ -61,9 +60,10 @@ $obj = json_decode($json);
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $obj->{'UpdateDate'} . " น." . "\r\n" .
-   "ติดเชื้อสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "เพิ่มขึ้น " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
-   "รักษาหายแล้ว " . $obj->{'Recovered'} . " ราย" . "\r\n" . 
-   "ตาย " . $obj->{'Deaths'} . " ราย";
+   "ผู้ป่วยยืนยันสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "ผู้ป่วยรายใหม่วันนี้ " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
+   "รักษาหาย " . $obj->{'Recovered'} . " ราย" . "\r\n" . 
+   "เสียชีวิต " . $obj->{'Deaths'} . " ราย". "\r\n" .
+   "(ที่มา : กรมควบคุมโรค) ";
 
 }else if($arrJson['events'][0]['message']['text'] == "5"){
   //include('monitor_bj_line.php');

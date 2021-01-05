@@ -72,7 +72,7 @@ $obj = json_decode($json);
    $json2 = file_get_contents('https://covid19.th-stat.com/api/open/cases/sum');
  
 
-$obj2 = json_decode($json);
+$obj2 = json_decode($json2);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";

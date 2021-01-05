@@ -51,7 +51,19 @@ if($arrJson['events'][0]['message']['text'] == "1"){
  $arrPostData['messages'][0]['previewImageUrl'] = "https://static.posttoday.com/media/content/2020/02/12/FBB2680F4455161950EA941678A25F76.jpg";
 
   }else if($arrJson['events'][0]['message']['text'] == "4"){
-  //include('POS_monitor_BANK_line.php');
+
+ $json = file_get_contents('https://covid19.th-stat.com/api/open/today');
+ 
+ //$json = '{"CustomerID":"C001","Name":"Weerachai Nukitram","Email":"win.weerachai@thaicreate.com","CountryCode":"TH","Budget":"1000000","Used":"600000"}';
+
+$obj = json_decode($json);
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $obj->{'UpdateDate'} . " น." . "\r\n" .
+   "ติดเชื้อสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "เพิ่มขึ้น " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
+   "รักษาหายแล้ว " . $obj->{'Recovered'} . " ราย" . "\r\n" . 
+   "ตาย " . $obj->{'Deaths'} . " ราย";
 
 }else if($arrJson['events'][0]['message']['text'] == "5"){
   //include('monitor_bj_line.php');

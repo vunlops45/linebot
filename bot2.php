@@ -25,11 +25,12 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
 
-}else if($arrJson['events'][0]['message']['text'] == "9"){
-  $arrPostData = array();
+}else if($arrJson['events'][0]['message']['text'] == "4"){
+   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "https://www.goldtraders.or.th/";
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/0ed5593919f8e1920e98dcb42ba7c387.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/0ed5593919f8e1920e98dcb42ba7c387.jpg";
 }else if($arrJson['events'][0]['message']['text'] == "โควิด" || $arrJson['events'][0]['message']['text'] == "ช่วย" || $arrJson['events'][0]['message']['text'] == "ช่วยเหลือ" || $arrJson['events'][0]['message']['text'] == "ขอข้อมูล" || $arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -37,6 +38,7 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData['messages'][0]['text'] = "สวัสดีครับ มีอะไรให้ช่วยไหมครับ" . "\r\n" . "กด 1 ยอดผู้ป่วยโควิด-19" . "\r\n" . 
    "กด 2 การเตรียมตัวก่อน-หลังเดินทางการในยุค COVID-19". "\r\n" . 
    "กด 3 การปฏิบัติตัวเมื่อเดินทางจากพื้นที่ที่มีการระบาด";
+   "กด 4 การรับมือโควิด-19";
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

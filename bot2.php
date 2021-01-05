@@ -30,7 +30,7 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "https://www.goldtraders.or.th/";
-}else if($arrJson['events'][0]['message']['text'] == "a" || $arrJson['events'][0]['message']['text'] == "A"){
+}else if($arrJson['events'][0]['message']['text'] == "โควิด" || $arrJson['events'][0]['message']['text'] == "ช่วย") || $arrJson['events'][0]['message']['text'] == "ช่วยเหลือ" || $arrJson['events'][0]['message']['text'] == "ขอข้อมูล" || $arrJson['events'][0]['message']['text'] == "สวัสดี")){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";

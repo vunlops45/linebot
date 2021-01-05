@@ -68,8 +68,15 @@ $obj = json_decode($json);
    "เสียชีวิต " . $obj->{'Deaths'} . " ราย". "\r\n" .
    "(ที่มา : กรมควบคุมโรค) ";
 
-}else if($arrJson['events'][0]['message']['text'] == "5"){
-  //include('monitor_bj_line.php');
+}else if($arrJson['events'][0]['message']['text'] == "99"){
+   $json2 = file_get_contents('https://covid19.th-stat.com/api/open/cases/sum');
+ 
+
+$obj2 = json_decode($json);
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = $obj2->{'Thailand'};
 }else{
   }
  

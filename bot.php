@@ -69,18 +69,9 @@ if($arrJson['events'][0]['message']['text'] == "1"){
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.i-vdo.info/v/jxex1tkk519";
   }else if($arrJson['events'][0]['message']['text'] == "7"){
  
- $json = '
-{
-"CustomerID":"C001",
-"Name":"Weerachai Nukitram",
-"Email":"win.weerachai@thaicreate.com",
-"CountryCode":"TH",
-"Budget":"1000000",
-"Used":"600000"
-}
-';
+ $json = '{"CustomerID":"C001","Name":"Weerachai Nukitram","Email":"win.weerachai@thaicreate.com","CountryCode":"TH","Budget":"1000000","Used":"600000"}';
 
-
+$obj = json_decode($json);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";

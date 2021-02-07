@@ -21,16 +21,31 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+   $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "การป้องกันตนเองจาก โควิด-19" . "\r\n" . "กด 3.1 xxx" . "\r\n" . 
+   "กด 3.2 yyy";
+ 
+ //$arrPostData['messages'][0]['type'] = "image";
+  //$arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
+ //$arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
+}else if($arrJson['events'][0]['message']['text'] == "3.1"){
+   $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
- $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
-
-}else if($arrJson['events'][0]['message']['text'] == "4"){
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/a54900abca14659523008ba972934324.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/a54900abca14659523008ba972934324.jpg";
+}else if($arrJson['events'][0]['message']['text'] == "3.2"){
    $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/0ed5593919f8e1920e98dcb42ba7c387.jpg";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/0ed5593919f8e1920e98dcb42ba7c387.jpg";
+}else if($arrJson['events'][0]['message']['text'] == "4"){
+   $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/92f62c71529005e59e225c313c734245.png";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/92f62c71529005e59e225c313c734245.png";
 }else if($arrJson['events'][0]['message']['text'] == "โควิด" || $arrJson['events'][0]['message']['text'] == "ช่วย" || $arrJson['events'][0]['message']['text'] == "ช่วยเหลือ" || $arrJson['events'][0]['message']['text'] == "ขอข้อมูล" || $arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -48,9 +63,21 @@ if($arrJson['events'][0]['message']['text'] == "3"){
 }else if($arrJson['events'][0]['message']['text'] == "5"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+   $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "การปฏิบัติตนเมื่อสัมผัสผู้ติดเชื้อ [QUARRANTINE]" . "\r\n" . "กด 5.1 xxx" . "\r\n" . 
+   "กด 5.2 yyy";
+}else if($arrJson['events'][0]['message']['text'] == "5.1"){
+   $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/24ff1031359f23f4b0e2fcb43daeaf9a.jpg";
- $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/24ff1031359f23f4b0e2fcb43daeaf9a.jpg";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/18aa829ea6dba6edd04f72547440ba87.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/18aa829ea6dba6edd04f72547440ba87.jpg";
+ }else if($arrJson['events'][0]['message']['text'] == "5.2"){
+   $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
 
   }else if($arrJson['events'][0]['message']['text'] == "1"){
 

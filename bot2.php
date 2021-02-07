@@ -79,6 +79,12 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
+ }else if($arrJson['events'][0]['message']['text'] == "6"){
+   $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
 
   }else if($arrJson['events'][0]['message']['text'] == "1"){
 

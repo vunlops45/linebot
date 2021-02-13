@@ -65,8 +65,8 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
    $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "การปฏิบัติตนเมื่อสัมผัสผู้ติดเชื้อ [QUARRANTINE]" . "\r\n" . "กด 5.1 xxx" . "\r\n" . 
-   "กด 5.2 yyy";
+  $arrPostData['messages'][0]['text'] = "การปฏิบัติตนเมื่อสัมผัสผู้ติดเชื้อ [QUARRANTINE]" . "\r\n" . "กด 5.1 วิธีการกักตัว 14 วัน" . "\r\n" . 
+   "กด 5.2 การปฏิบัติตนสำหรับผู้ร่วมบ้าน";
 }else if($arrJson['events'][0]['message']['text'] == "5.1"){
    $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

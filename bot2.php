@@ -19,27 +19,11 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 if($arrJson['events'][0]['message']['text'] == "3"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "การป้องกันตนเองจาก โควิด-19" . "\r\n" . "กด 3.1 xxx" . "\r\n" . 
-   "กด 3.2 yyy";
- 
- //$arrPostData['messages'][0]['type'] = "image";
-  //$arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
- //$arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/8a18b38a19dcf39fc62334cba717863f.jpg";
-}else if($arrJson['events'][0]['message']['text'] == "3.1"){
    $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/a54900abca14659523008ba972934324.jpg";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/a54900abca14659523008ba972934324.jpg";
-}else if($arrJson['events'][0]['message']['text'] == "3.2"){
-   $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/0ed5593919f8e1920e98dcb42ba7c387.jpg";
- $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/0ed5593919f8e1920e98dcb42ba7c387.jpg";
 }else if($arrJson['events'][0]['message']['text'] == "4"){
    $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -80,6 +64,18 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
  }else if($arrJson['events'][0]['message']['text'] == "6"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+   $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "วัคซีนโควิด-19" . "\r\n" . "กด 6.1 ประเภทของวัคซีนโควิด-19" . "\r\n" . 
+   "กด 6.2 อาการไม่พึงประสงค์หลังจากรับวัคซีนโควิด-19";
+ }else if($arrJson['events'][0]['message']['text'] == "6.1"){
+   $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/3ec56af72ec829e04f452077cf527d41.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/3ec56af72ec829e04f452077cf527d41.jpg";
+ }else if($arrJson['events'][0]['message']['text'] == "6.2"){
    $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";

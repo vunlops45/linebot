@@ -84,7 +84,7 @@ $arrPostData = array();
   }else if($arrJson['events'][0]['message']['text'] == "1"){
 
  //$json = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
- $json = curl_get_contents('https://www.bangkokpost.com/specials/covid19/');
+ //$json = curl_get_contents('https://www.bangkokpost.com/specials/covid19/');
  //$json = curl_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
  
  //$json ='{"Confirmed":225365,"Recovered":187836,"Hospitalized":35836,"Deaths":1693,"NewConfirmed":4059,"NewRecovered":2047,"NewHospitalized":1977,"NewDeaths":35,"UpdateDate":"22\/06\/2021 16:59","DevBy":"https:\/\/www.kidkarnmai.com\/"}';
@@ -96,7 +96,7 @@ $arrPostData = array();
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $json . " น." ;
+  $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . " น." ;
 
 }else if($arrJson['events'][0]['message']['text'] == "xczcxzzczxcz"){
    $json2 = file_get_contents('https://covid19.th-stat.com/api/open/cases/sum');

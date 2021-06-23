@@ -83,7 +83,8 @@ $arrPostData = array();
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/b84d364f9f80f88f875659c772c78c69.jpg";
   }else if($arrJson['events'][0]['message']['text'] == "1"){
 
- $json = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
+ //$json = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
+ $json = file_get_contents('https://www.thairath.co.th/event_corona');
  //$json = curl_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
  
  //$json ='{"Confirmed":225365,"Recovered":187836,"Hospitalized":35836,"Deaths":1693,"NewConfirmed":4059,"NewRecovered":2047,"NewHospitalized":1977,"NewDeaths":35,"UpdateDate":"22\/06\/2021 16:59","DevBy":"https:\/\/www.kidkarnmai.com\/"}';
@@ -95,7 +96,7 @@ $obj = json_decode($json);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $obj->{'UpdateDate'} . " น." . "\r\n" .
+  $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $json . " น." . "\r\n" .
    "ผู้ป่วยยืนยันสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "ผู้ป่วยรายใหม่วันนี้ " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
    "รักษาอยู่ใน ร.พ. " . $obj->{'Hospitalized'} . " ราย" . "\r\n" .
    "รักษาอยู่ใน ร.พ. เพิ่มขึ้นวันนี้ " . $obj->{'NewHospitalized'} . " ราย" . "\r\n" .

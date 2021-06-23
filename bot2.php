@@ -96,7 +96,7 @@ $arrPostData = array();
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $json . " น." ;
+  $arrPostData['messages'][0]['text'] = $json;
 
 }else if($arrJson['events'][0]['message']['text'] == "xczcxzzczxcz"){
    $json2 = file_get_contents('https://covid19.th-stat.com/api/open/cases/sum');

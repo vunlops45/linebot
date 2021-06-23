@@ -83,22 +83,22 @@ $arrPostData = array();
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/b84d364f9f80f88f875659c772c78c69.jpg";
   }else if($arrJson['events'][0]['message']['text'] == "1"){
 
- $json = file_get_contents('https://www.google.com/?hl=th');
+ $json = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
  
  //$json = '{"CustomerID":"C001","Name":"Weerachai Nukitram","Email":"win.weerachai@thaicreate.com","CountryCode":"TH","Budget":"1000000","Used":"600000"}';
 
-//$obj = json_decode($json);
+$obj = json_decode($json);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $json . " น." . "\r\n" .
-   //"ผู้ป่วยยืนยันสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "ผู้ป่วยรายใหม่วันนี้ " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
-   //"รักษาอยู่ใน ร.พ. " . $obj->{'Hospitalized'} . " ราย" . "\r\n" .
-   //"รักษาอยู่ใน ร.พ. เพิ่มขึ้นวันนี้ " . $obj->{'NewHospitalized'} . " ราย" . "\r\n" .
-   //"รักษาหาย " . $obj->{'Recovered'} . " ราย" . "\r\n" .
-   //"รักษาหายวันนี้ " . $obj->{'NewRecovered'} . " ราย" . "\r\n" .
-   //"เสียชีวิต " . $obj->{'Deaths'} . " ราย". "\r\n" .
-   //"เสียชีวิตวันนี้ " . $obj->{'NewDeaths'} . " ราย". "\r\n" .
+   "ผู้ป่วยยืนยันสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "ผู้ป่วยรายใหม่วันนี้ " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
+   "รักษาอยู่ใน ร.พ. " . $obj->{'Hospitalized'} . " ราย" . "\r\n" .
+   "รักษาอยู่ใน ร.พ. เพิ่มขึ้นวันนี้ " . $obj->{'NewHospitalized'} . " ราย" . "\r\n" .
+   "รักษาหาย " . $obj->{'Recovered'} . " ราย" . "\r\n" .
+   "รักษาหายวันนี้ " . $obj->{'NewRecovered'} . " ราย" . "\r\n" .
+   "เสียชีวิต " . $obj->{'Deaths'} . " ราย". "\r\n" .
+   "เสียชีวิตวันนี้ " . $obj->{'NewDeaths'} . " ราย". "\r\n" .
    "(ที่มา : กรมควบคุมโรค) ";
 
 }else if($arrJson['events'][0]['message']['text'] == "xczcxzzczxcz"){

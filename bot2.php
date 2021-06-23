@@ -84,7 +84,7 @@ $arrPostData = array();
   }else if($arrJson['events'][0]['message']['text'] == "1"){
 
  //$json = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
- $json = file_get_contents('https://github.com/');
+ $json = file_get_contents("http://www.google.com");
  //$json = curl_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
  
  //$json ='{"Confirmed":225365,"Recovered":187836,"Hospitalized":35836,"Deaths":1693,"NewConfirmed":4059,"NewRecovered":2047,"NewHospitalized":1977,"NewDeaths":35,"UpdateDate":"22\/06\/2021 16:59","DevBy":"https:\/\/www.kidkarnmai.com\/"}';

@@ -83,8 +83,8 @@ $arrPostData = array();
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/b84d364f9f80f88f875659c772c78c69.jpg";
   }else if($arrJson['events'][0]['message']['text'] == "1"){
 
- //$json = file_get_contents('http://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
- $json ='{"Confirmed":225365,"Recovered":187836,"Hospitalized":35836,"Deaths":1693,"NewConfirmed":4059,"NewRecovered":2047,"NewHospitalized":1977,"NewDeaths":35,"UpdateDate":"22\/06\/2021 16:59","DevBy":"https:\/\/www.kidkarnmai.com\/"}';
+ $json = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
+ //$json ='{"Confirmed":225365,"Recovered":187836,"Hospitalized":35836,"Deaths":1693,"NewConfirmed":4059,"NewRecovered":2047,"NewHospitalized":1977,"NewDeaths":35,"UpdateDate":"22\/06\/2021 16:59","DevBy":"https:\/\/www.kidkarnmai.com\/"}';
 
  
  //$json = '{"CustomerID":"C001","Name":"Weerachai Nukitram","Email":"win.weerachai@thaicreate.com","CountryCode":"TH","Budget":"1000000","Used":"600000"}';

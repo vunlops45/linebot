@@ -83,11 +83,11 @@ $arrPostData = array();
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/b84d364f9f80f88f875659c772c78c69.jpg";
   }else if($arrJson['events'][0]['message']['text'] == "1"){
 
- //$json = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
+ $json = file_get_contents('http://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
  
- $ch = curl_init('http://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$json = curl_exec($ch);
+ //$ch = curl_init('http://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
+//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//$json = curl_exec($ch);
  
  //$json = '{"CustomerID":"C001","Name":"Weerachai Nukitram","Email":"win.weerachai@thaicreate.com","CountryCode":"TH","Budget":"1000000","Used":"600000"}';
 

@@ -85,7 +85,7 @@ $arrPostData = array();
 
  //$json = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
  
- $ch = curl_init('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
+ $ch = curl_init('http://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $json = curl_exec($ch);
  

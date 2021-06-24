@@ -93,8 +93,8 @@ $arrPostData = array();
  //$json = '{"CustomerID":"C001","Name":"Weerachai Nukitram","Email":"win.weerachai@thaicreate.com","CountryCode":"TH","Budget":"1000000","Used":"600000"}';
 
 $obj = json_decode($json, true);
-
- $new_date = date('d-m-Y', $obj['updated']);
+$new_update = substr($obj['updated'],0,10);
+ $new_date = date("d-m-Y h:i:sa", $new_update);
  
  $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

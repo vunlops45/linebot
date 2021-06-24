@@ -15,8 +15,8 @@ echo 'https wrapper: ', in_array('https', $w) ? 'yes':'no', "<br>";
 echo 'wrappers: ', var_export($w);
 ///////////////////////////////////////////////////////
 
-$response = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getSumCases.json');
-//$response = file_get_contents('http://www.thaigold.info/RealTimeDataV2/gtdata_.txt');
+//$response = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getSumCases.json');
+$response = file_get_contents('https://www.thaigold.info/RealTimeDataV2/gtdata_.txt');
 echo $response;
 
 

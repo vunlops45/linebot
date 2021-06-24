@@ -94,7 +94,7 @@ $arrPostData = array();
 
 $obj = json_decode($json, true);
 
- $new_date = date('Y-m-d H:i:s', $obj['updated']);
+ $new_date = date('d-m-Y', $obj['updated']);
  
  $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];

@@ -22,5 +22,5 @@ echo $response;
 
 echo var_dump($response);
 
-phpinfo();
+//phpinfo();
 ?>

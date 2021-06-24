@@ -99,8 +99,16 @@ $new_update = substr($obj['updated'],0,10);
  $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
- //$arrPostData['messages'][0]['text'] = $obj['updated'];
-  $arrPostData['messages'][0]['text'] = $obj['cases'];
+  //$arrPostData['messages'][0]['text'] = $obj['cases'];
+ $arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . $new_date . "\r\n" .
+   "ผู้ป่วยยืนยันสะสม " . $obj['cases'] . " ราย" . "\r\n" . "ผู้ป่วยรายใหม่วันนี้ " . $obj['todayCases'] . " ราย"  . "\r\n" . 
+   "รักษาอยู่ใน ร.พ. " . $obj['active'] . " ราย" . "\r\n" . 
+   "รักษาหาย " . $obj['recovered'] . " ราย" . "\r\n" .
+   "รักษาหายวันนี้ " . $obj['todayRecovered'] . " ราย" . "\r\n" .
+   "เสียชีวิต " . $obj['deaths'] . " ราย". "\r\n" .
+   "เสียชีวิตวันนี้ " . $obj['todayDeaths'] . " ราย". "\r\n" .
+   "(ที่มา : กรมควบคุมโรค) ";
+
   /*$arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $obj->{'UpdateDate'} . " น." . "\r\n" .
    "ผู้ป่วยยืนยันสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "ผู้ป่วยรายใหม่วันนี้ " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
    "รักษาอยู่ใน ร.พ. " . $obj->{'Hospitalized'} . " ราย" . "\r\n" .

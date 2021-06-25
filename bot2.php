@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Asia/Bangkok');
 define('LINE_API',"https://notify-api.line.me/api/notify");
 
 $ACCESS_TOKEN = 'ftsoY52+xbkCiMsxsIhyCqANP+8FIj5wpINM/PaLsH4Kel0eanJHOFbFfqdzkJ9OBBOf3XIPppGsENtJ+ZV9cJTGZyBt0ymPE3lSjHZoNQifx2wKIN98Rutz7dyl0Nknt4fWstSJulo7OOh2QYTy4gdB04t89/1O/w1cDnyilFU='; 

@@ -76,13 +76,16 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/e8faff6a52644afab1b072a92312abd8.jpg";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/e8faff6a52644afab1b072a92312abd8.jpg";
+   $arrPostData['messages'][1]['type'] = "image";
+  $arrPostData['messages'][1]['originalContentUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
+ $arrPostData['messages'][1]['previewImageUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
   send_line($strUrl,$arrHeader,$arrPostData);
-   $arrPostData2 = array();
+ /*  $arrPostData2 = array();
   $arrPostData2['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData2['messages'][0]['type'] = "image";
   $arrPostData2['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
  $arrPostData2['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
-  send_line($strUrl,$arrHeader,$arrPostData2);
+  send_line($strUrl,$arrHeader,$arrPostData2);*/
  
    /*$arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "วัคซีนโควิด-19" . "\r\n" . "กด 6.1 ประเภทของวัคซีนโควิด-19" . "\r\n" . 

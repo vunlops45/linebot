@@ -45,6 +45,7 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "https://covid19.th-stat.com/th/share/map";
+ send_line($strUrl,$arrHeader,$arrPostData);
 }else if($arrJson['events'][0]['message']['text'] == "5"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -144,7 +145,8 @@ $obj2 = json_decode($json2, true);
 }else{
   }
  
- 
+ function send_line($strUrl,$arrHeader,$arrPostData)
+ {
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
@@ -155,7 +157,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
-
+ }
 function curl_get_contents($url)
 {
     $ch=curl_init();

@@ -66,7 +66,18 @@ if($arrJson['events'][0]['message']['text'] == "3"){
  }else if($arrJson['events'][0]['message']['text'] == "6"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-   $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.i-pic.info/i/BXRj49273][img]https://www.i-pic.info/i/BXRj49273.png";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.i-pic.info/i/BXRj49273][img]https://www.i-pic.info/i/BXRj49273.png";
+ 
+   $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.i-pic.info/i/UKe749274][img]https://www.i-pic.info/i/UKe749274.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.i-pic.info/i/UKe749274][img]https://www.i-pic.info/i/UKe749274.jpg";
+ 
+ 
+   /*$arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "วัคซีนโควิด-19" . "\r\n" . "กด 6.1 ประเภทของวัคซีนโควิด-19" . "\r\n" . 
    "กด 6.2 อาการไม่พึงประสงค์หลังจากรับวัคซีนโควิด-19";
  }else if($arrJson['events'][0]['message']['text'] == "6.1"){
@@ -80,7 +91,7 @@ $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/b84d364f9f80f88f875659c772c78c69.jpg";
- $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/b84d364f9f80f88f875659c772c78c69.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/b84d364f9f80f88f875659c772c78c69.jpg";*/
   }else if($arrJson['events'][0]['message']['text'] == "1"){
 
  //$json = file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');

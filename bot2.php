@@ -67,14 +67,14 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.i-pic.info/i/UKe749274.jpg";
- $arrPostData['messages'][0]['previewImageUrl'] = "https://www.i-pic.info/i/UKe749274.jpg";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/e8faff6a52644afab1b072a92312abd8.jpg";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/e8faff6a52644afab1b072a92312abd8.jpg";
  
-   $arrPostData = array();
+ //  $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.i-pic.info/i/BXRj49273.png";
- $arrPostData['messages'][0]['previewImageUrl'] = "https://www.i-pic.info/i/BXRj49273.png";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
  
  
    /*$arrPostData['messages'][0]['type'] = "text";

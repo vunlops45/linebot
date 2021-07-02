@@ -24,12 +24,14 @@ if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/a54900abca14659523008ba972934324.jpg";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/a54900abca14659523008ba972934324.jpg";
+  send_line($strUrl,$arrHeader,$arrPostData);
 }else if($arrJson['events'][0]['message']['text'] == "4"){
    $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/92f62c71529005e59e225c313c734245.png";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/92f62c71529005e59e225c313c734245.png";
+  send_line($strUrl,$arrHeader,$arrPostData);
 }else if($arrJson['events'][0]['message']['text'] == "โควิด" || $arrJson['events'][0]['message']['text'] == "ช่วย" || $arrJson['events'][0]['message']['text'] == "ช่วยเหลือ" || $arrJson['events'][0]['message']['text'] == "ขอข้อมูล" || $arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -40,6 +42,7 @@ if($arrJson['events'][0]['message']['text'] == "3"){
    "กด 4 อาการของโควิด-19". "\r\n" .
    "กด 5 การปฏิบัติตนเมื่อสัมผัสผู้ติดเชื้อ [QUARRANTINE]". "\r\n" .
    "กด 6 วัคซีนป้องกันโควิด-19";
+  send_line($strUrl,$arrHeader,$arrPostData);
 }else if($arrJson['events'][0]['message']['text'] == "2"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -52,31 +55,34 @@ if($arrJson['events'][0]['message']['text'] == "3"){
    $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "การปฏิบัติตนเมื่อสัมผัสผู้ติดเชื้อ [QUARRANTINE]" . "\r\n" . "กด 5.1 วิธีการกักตัว 14 วัน" . "\r\n" . 
    "กด 5.2 การปฏิบัติตนสำหรับผู้ร่วมบ้าน";
+  send_line($strUrl,$arrHeader,$arrPostData);
 }else if($arrJson['events'][0]['message']['text'] == "5.1"){
    $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/18aa829ea6dba6edd04f72547440ba87.jpg";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/18aa829ea6dba6edd04f72547440ba87.jpg";
+  send_line($strUrl,$arrHeader,$arrPostData);
  }else if($arrJson['events'][0]['message']['text'] == "5.2"){
    $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/e0367285b4dc01e6acfa24814b5fbe5e.png";
+  send_line($strUrl,$arrHeader,$arrPostData);
  }else if($arrJson['events'][0]['message']['text'] == "6"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/e8faff6a52644afab1b072a92312abd8.jpg";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/e8faff6a52644afab1b072a92312abd8.jpg";
- 
- //  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
- $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
- 
+  send_line($strUrl,$arrHeader,$arrPostData);
+   $arrPostData2 = array();
+  $arrPostData2['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData2['messages'][0]['type'] = "image";
+  $arrPostData2['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
+ $arrPostData2['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/f6c5d3dbd8b39e9226bee8738868d759.png";
+  send_line($strUrl,$arrHeader,$arrPostData2);
  
    /*$arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "วัคซีนโควิด-19" . "\r\n" . "กด 6.1 ประเภทของวัคซีนโควิด-19" . "\r\n" . 
@@ -120,7 +126,7 @@ $new_update = substr($obj['updated'],0,10);
    "เสียชีวิต " . $obj['deaths'] . " ราย". "\r\n" .
    "เสียชีวิตวันนี้ " . $obj['todayDeaths'] . " ราย". "\r\n" .
    "(ที่มา : กรมควบคุมโรค) ";
-
+  send_line($strUrl,$arrHeader,$arrPostData);
   /*$arrPostData['messages'][0]['text'] = "รายงานสถานะการณ์ Covid-19 ล่าสุด" . "\r\n" . "วันที่ " . $obj->{'UpdateDate'} . " น." . "\r\n" .
    "ผู้ป่วยยืนยันสะสม " . $obj->{'Confirmed'} . " ราย" . "\r\n" . "ผู้ป่วยรายใหม่วันนี้ " . $obj->{'NewConfirmed'} . " ราย"  . "\r\n" . 
    "รักษาอยู่ใน ร.พ. " . $obj->{'Hospitalized'} . " ราย" . "\r\n" .
